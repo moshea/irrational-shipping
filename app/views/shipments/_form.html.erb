@@ -1,3 +1,5 @@
+<div class='ui-state-default ui-corner-all'>
+<h2 class='ui-widget-header'> New Shipment </h2>
 <%= form_for(@shipment) do |f| %>
   <% if @shipment.errors.any? %>
     <div id="error_explanation">
@@ -28,25 +30,38 @@
 
   <div class='field'>
     <%= f.label :height %>
-    <%= f.text_field :height %>
+    <%= f.text_field :height %> (cm)
   </div>
 
   <div class='field'>
     <%= f.label :width %>
-    <%= f.text_field :width %>
+    <%= f.text_field :width %> (cm)
   </div>
 
   <div class='field'>
     <%= f.label :depth %>
-    <%= f.text_field :depth %>
+    <%= f.text_field :depth %> (cm)
   </div>
 
   <div class='field'>
     <%= f.label :weight %>
-    <%= f.text_field :weight %>
+    <%= f.text_field :weight %> (kg)
+  </div>
+
+  <div class='field'>
+    <%= f.label :pickup_date %>
+    <%= f.text_field :pickup_date %>
+  </div>
+  <div class='field'>
+    <%= f.label :delivery_date %>
+    <%= f.text_field :delivery_date %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+	<span class='ui-state-default ui-corner-all'>
+		<%= link_to 'Cancel', root_url %>
+	</span>
+    <%= f.submit :class=>'ui-state-default ui-corner-all' %>
   </div>
 <% end %>
+</div>

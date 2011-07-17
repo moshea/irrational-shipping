@@ -12,7 +12,12 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
+label{
+	float: left;
+	width: 110px;
+}
+
+a { color: #000; text-decoration:none; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
@@ -53,4 +58,35 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+#page{
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#header{
+	height: 25px;
+	width: 100%;
+	background-image: url('/images/header.png');
+	color: #fff;
+	text-align:right;
+}
+#header a{
+	color: #fff;
+	padding-right: 5px;
+}
+#banner{
+	height: 300px;
+	width: 900px;
+	background-image: url('/images/banner.png');
+	margin-bottom: 20px;
+}
+.gadget{
+	width: 40%;
+}
+.no_button{
+	background:none;
+	border:0;
+	color:#fff;
+	font-size:13px;
 }

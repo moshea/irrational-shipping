@@ -1,13 +1,16 @@
-<%= form_for(@user_session) do |f| %>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class='gadget ui-state-default ui-corner-all'>
+	<h2 class='ui-widget-header'> Login </h2>
+	<%= form_for(@user_session) do |f| %>
+	  <div class="field">
+	    <%= f.label :email %>
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :password %>
+	    <%= f.text_field :password %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit 'Login', :class=>'ui-state-default ui-corner-all' %>
+	  </div>
+	<% end %>
+</div>

@@ -4,11 +4,22 @@
   <title>IrrationalShipping</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+  <link type="text/css" href="/stylesheets/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+  <script type="text/javascript" src="/javascripts/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery-ui-1.8.14.custom.min.js"></script>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id='page'>
+	<div id='header'>
+		<% if current_user %>
+			<%= button_to 'Logout', user_session_path(current_user), :method => :delete, :class=>'no_button' %>
+		<% else %>
+			<%= link_to 'Login', new_user_session_path %> | 
+			<%= link_to 'Register', new_user_path %>
+		<% end %>
+	</div>
+	<%= yield %>
+</div>
 </body>
 </html>

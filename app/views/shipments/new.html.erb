@@ -1,5 +1,12 @@
-<h1>New shipment</h1>
+<script>
+$(function(){
+	$('#shipment_pickup_date').datepicker({
+		inline: true
+	});
 
+	$('#shipment_delivery_date').datepicker({
+		inline: true
+	});
+});
+</script>
 <%= render 'form' %>
-
-<%= link_to 'Back', shipments_path %>
