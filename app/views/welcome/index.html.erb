@@ -1,0 +1,25 @@
+<% if current_user %>
+	<%= link_to 'Logout', user_session_path(current_user), :method => :delete %>
+<% else %>
+	<%= link_to 'Login', new_user_session_path %>
+	<%= link_to 'Register', new_user_path %>
+<% end %>
+
+<div class='gadget'>
+	<%= form_for @shipment, :url=>new_shipment_path do |f| %>
+		<div class='field'>
+			<%= f.label :country_origin, 'From' %>
+			<%= f.text_field :country_origin %>
+		</div>
+
+		<div class='field'>
+			<%= f.label :country_dst, 'To' %>
+			<%= f.text_field :country_dest %>
+		</div>
+
+		<div class='actions'>
+			<%= f.submit 'GO'%>
+		</div>
+	<% end %>
+
+</div>
