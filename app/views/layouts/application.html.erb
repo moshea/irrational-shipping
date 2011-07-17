@@ -10,16 +10,17 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div id='page'>
 	<div id='header'>
-		<% if current_user %>
-			<%= button_to 'Logout', user_session_path(current_user), :method => :delete, :class=>'no_button' %>
-		<% else %>
-			<%= link_to 'Login', new_user_session_path %> | 
-			<%= link_to 'Register', new_user_path %>
-		<% end %>
+		<div id='header_center'>
+			<% if current_user %>
+				<%= button_to 'Logout', user_session_path(current_user), :method => :delete, :class=>'no_button' %>
+			<% else %>
+				<%= link_to 'Login', new_user_session_path %> | 
+				<%= link_to 'Register', new_user_path %>
+			<% end %>
+		</div>
 	</div>
+
 	<%= yield %>
-</div>
 </body>
 </html>

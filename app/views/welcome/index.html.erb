@@ -1,22 +1,25 @@
 <div id='banner'>
-
+	<div id='banner_center'>
+	</div>
 </div>
-<div class='gadget ui-state-default ui-corner-all'>
-	<h3 class='ui-widget-header'> New Shipment </h2>
-	<%= form_for @shipment, :url=>new_shipment_path do |f| %>
-		<div class='field'>
-			<%= f.label :country_origin, 'From' %>
-			<%= f.text_field :country_origin %>
-		</div>
-
-		<div class='field'>
-			<%= f.label :country_dst, 'To' %>
-			<%= f.text_field :country_dest %>
-		</div>
-
-		<div class='actions'>
-			<%= f.submit 'Ship It!', :class=>'ui-state-default ui-corner-all' %>
-		</div>
-	<% end %>
-
+<div id='page'>
+	<div class='gadget ui-state-default ui-corner-all'>
+		<h3 class='ui-widget-header'> New Shipment </h2>
+		<%= form_for @shipment, :url=>new_shipment_path do |f| %>
+			<div class='field'>
+				<%= f.label :country_origin, 'From' %>
+				<%= f.text_field :country_origin %>
+			</div>
+	
+			<div class='field'>
+				<%= f.label :country_dst, 'To' %>
+				<%= f.text_field :country_dest %>
+			</div>
+	
+			<div class='actions'>
+				<%= f.submit 'Ship It!', :class=>'ui-state-default ui-corner-all' %>
+			</div>
+		<% end %>
+	
+	</div>
 </div>
